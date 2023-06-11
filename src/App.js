@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import HomePage from "./Components/HomePage";
+// import { Router, Route } from "react-router-dom";
+// import {Switch} from "react-router-dom";
+import MovieDetails from "./Components/MovieDetails";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ActorDetails from "./Components/ActorDetails";
+import Starships from "./Components/Starships";
+import PlanetDetail from "./Components/PlanetDetail";
 
-function App() {
+export default function App() {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element: <HomePage />,
+    },
+    {
+      path: "/:movieId",
+      element: <MovieDetails />,
+    },
+    {
+      path: "/people/:characterId",
+      element: <ActorDetails />,
+    },
+    {
+      path: "/starships",
+      element : <Starships/>
+    },
+    {
+      path: "/planets",
+      element : <PlanetDetail/>
+    }
+  ]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <RouterProvider router={router} />
+      
+       
     </div>
   );
 }
-
-export default App;

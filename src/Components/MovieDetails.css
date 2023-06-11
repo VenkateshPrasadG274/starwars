@@ -1,0 +1,66 @@
+    .movie-item {
+    background-color: rgba(247, 241, 241, 0.8);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width:75%;
+    color: rgb(56, 54, 54);
+  }
+    
+
+  
+  .movie-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #2F4858;
+
+  }
+  
+  .movie-description {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    color: rgb(56, 54, 54);
+  }
+  
+  .movie-details {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .movie-details li {
+    margin-bottom: 5px;
+  }
+  
+  .movie-details strong {
+    color: #C48208;
+  }
+  
+  .main-class {
+    display: flex;
+    
+  }
+  
+  .left-column {
+    flex: 1;
+    overflow-y: auto;
+    margin:20px;
+  }
+  
+  .right-column {
+    flex: 1;
+    margin:20px;
+
+  }
+  
+  .character-link {
+    color: #f5f1f1;
+    text-decoration: none;
+  }
+  
+  .character-link:hover {
+    text-decoration: underline;
+  }
+  
+  
